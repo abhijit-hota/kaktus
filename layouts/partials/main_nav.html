@@ -1,0 +1,50 @@
+<aside id="left-aside">
+  <div class="header-post mt3">
+    <div id="nav">
+      <ul>
+        {{ range .Site.Menus.main }}
+          {{ if isset site.Params "menuicons" }}
+            {{ $menuIcon := index
+              site.Params.menuIcons .URL
+            }}
+            <li>
+              <i class="fas fa-{{ $menuIcon }}" aria-hidden="true"></i>
+              <a href="{{ .URL }}">{{ .Name }}</a>
+            </li>
+          {{ end }}
+        {{ end }}
+      </ul>
+    </div>
+    <hr />
+    <ul>
+      {{ if .Prev }}
+        <li>
+          <a class="icon" href=" {{ .Prev.Permalink }}" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true"></i> Previous
+          </a>
+        </li>
+      {{ end }}
+      {{ if .Next }}
+        <li>
+          <a class="icon" href="{{ .Next.Permalink }}" aria-label="Next">
+            <i class="fas fa-chevron-right" aria-hidden="true"></i> Next
+          </a>
+        </li>
+      {{ end }}
+
+
+      <li>
+        <a
+          class="icon"
+          href="#"
+          aria-label="Share"
+          onclick="$('#share').toggle();return false;">
+          <i class="fas fa-share-alt" aria-hidden="true"></i> Share
+        </a>
+      </li>
+      <div id="share" style="display: none">
+        {{ .Scratch.Set "icon_class_name" "" }} {{ partial "share.html" . }}
+      </div>
+    </ul>
+  </div>
+</aside>

@@ -1,9 +1,14 @@
-#header-post {
-  position: fixed;
+#left-aside {
+  width: 16rem;
+  padding: 0 2rem;
+}
+#right-aside {
+  padding-left: 2rem;
+}
+
+.header-post {
+  position: sticky;
   top: 2rem;
-  right: 0;
-  display: inline-block;
-  float: right;
   z-index: 100;
 
   a {
@@ -21,26 +26,14 @@
   nav {
     ul {
       display: block;
-
       list-style-image: none;
-
       list-style-position: outside;
-
       list-style-type: none;
-
-      padding-inline-start: 40px;
-
       li {
         display: list-item;
-
         margin-right: 0px;
       }
     }
-  }
-  nav > ul {
-    margin-block-end: 1em;
-
-    margin-block-start: 1em;
   }
 
   ul {
@@ -50,7 +43,6 @@
     list-style-type: none;
 
     li {
-      display: inline-block;
       margin-right: 15px;
       vertical-align: middle;
     }
@@ -96,14 +88,12 @@
   }
   #nav {
     color: $color-accent-1;
-    letter-spacing: .01em;
+    letter-spacing: 0.01em;
     font-weight: 200;
     font-style: normal;
-    font-size: .8rem;
+    font-size: 0.8rem;
 
     ul {
-      line-height: 15px;
-
       a {
         margin-right: 15px;
         color: $color-accent-1;
@@ -112,7 +102,9 @@
         @include underline(5px, $color-accent-1);
       }
       li {
-        border-right: 1px dotted $color-accent-1;
+        border-left: 1px dotted $color-accent-1;
+        padding-left: 1em;
+        margin-top: 1em;
       }
       li:last-child {
         margin-right: 0;
@@ -129,7 +121,6 @@
     margin-top: 2rem;
     margin-right: 2rem;
     width: 100%;
-    text-align: right;
 
     ul {
       display: block;
@@ -151,14 +142,11 @@
     }
   }
   #toc {
-    float: right;
-    clear: both;
     overflow: auto;
     margin-top: 1rem;
     padding-right: 2rem;
     max-width: 20em;
     max-height: calc(95vh - 7rem);
-    text-align: right;
 
     a:hover {
       color: $color-link;
@@ -168,7 +156,12 @@
 
     nav > ul > li {
       color: $color-text;
-      font-size: .8rem;
+      font-size: 0.8rem;
+
+      max-width: 12rem;
+      white-space: nowrap;
+      overflow-x: hidden;
+      text-overflow: ellipsis;
 
       &:before {
         color: $color-accent-1;
@@ -178,7 +171,8 @@
     }
     nav > ul > li > ul > li {
       color: $color-meta;
-      font-size: .7rem;
+      font-size: 0.7rem;
+	  margin-left: 1rem ;
 
       &:before {
         color: $color-accent-1;
@@ -189,7 +183,7 @@
     }
     nav > ul > li > ul > li > ul > li {
       color: darken($color-meta, 20%);
-      font-size: .4rem;
+      font-size: 0.4rem;
     }
     .toc-level-5 {
       display: none;
@@ -200,57 +194,19 @@
     .toc-number {
       display: none;
     }
-// smartphone + phapblet
   }
 }
-@media screen and (max-width: 500px) {
-  #header-post {
+@media screen and (max-width: 1280px) {
+  .header-post {
     display: none;
   }
-}
-
-@media screen and (max-width: 900px) {
-  #header-post {
-    #menu-icon {
-      display: none;
-    }
-    #actions {
-      display: none;
+  .post-container {
+    display: contents;
+    #writeup {
+      margin: 0 auto;
     }
   }
-}
-@media screen and (max-width: 1199px) {
-  #header-post {
-    #toc {
-      display: none;
-    }
+  article {
+	padding: 0 1rem;
   }
 }
-@media screen and (min-width: 900px) {
-  #header-post {
-    #menu-icon-tablet {
-      display: none !important;
-    }
-    #top-icon-tablet {
-      display: none !important;
-    }
-  }
-}
-@media screen and (min-width: 1199px) {
-  #header-post {
-    #actions {
-      width: auto;
-
-      ul {
-        display: inline-block;
-        float: right;
-      }
-      .info {
-        display: inline;
-        float: left;
-        margin-right: 2rem;
-        font-style: italic;
-      }
-    }
-  }
-};

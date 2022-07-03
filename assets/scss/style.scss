@@ -1,5 +1,5 @@
 @import "variables";
-@import "colors/{{ site.Params.colortheme | default "white" }}";
+@import 'colors/{{ site.Params.colortheme | default "white" }}';
 @import "util";
 @import "mixins";
 @import "extend";
@@ -37,26 +37,29 @@ body {
 
   @extend $base-style !optional;
 }
+
+.post-container {
+  position: relative;
+  display: flex;
+}
+
 .content {
   position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  overflow-wrap: break-word;
 
-  p {
-    @include hyphens(auto);
-  }
   code {
     @include hyphens(manual);
   }
   a {
     color: $color-text;
     text-decoration: none;
-
+    
     @include underline(5px, $color-text);
-
+    
     &:hover {
+      color: $color-link;
       background-image: linear-gradient(transparent, transparent 4px, $color-link 4px, $color-link);
     }
   }
@@ -125,12 +128,6 @@ body {
   .my4 {
     margin-top: 2rem;
     margin-bottom: 2rem;
-  }
-}
-
-@media (min-width: 480px) {
-  p {
-    text-align: justify;
   }
 }
 

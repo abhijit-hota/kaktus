@@ -7,9 +7,9 @@
   vertical-align: top;
   text-align: center;
   font-size: 11px;
+  border-top: 2px dotted $color-meta;
 
   ul {
-    margin: 0;
     padding: 0;
     list-style: none;
   }
@@ -53,7 +53,6 @@
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    margin-bottom: 20px;
 
     .footer-left {
       align-self: flex-start;
@@ -62,5 +61,8 @@
     .footer-right {
       align-self: flex-end;
     }
+    ul {
+      margin: 0;
+    }
   }
-};
+} ;

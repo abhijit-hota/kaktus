@@ -1,0 +1,15 @@
+<hr />
+<h1 class="mt0">
+  Shared on
+  {{ if gt .Params.shares 0 -}}
+    {{ range $index, $value := .Params.shares -}}
+      {{ if gt $index 0 }}{{ ", " }}{{ end }}
+      <a
+        href="{{ $value.url | relLangURL }}{{ $value | urlize }}"
+        rel="noopener noreferrer"
+        target="_blank"
+        ><i class="fab fa-{{- $value.icon -}}"></i> {{ $value.title -}}</a
+      >
+    {{- end }}
+  {{- end }}
+</h1>
