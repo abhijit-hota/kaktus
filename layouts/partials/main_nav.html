@@ -17,17 +17,17 @@
     </div>
     <hr />
     <ul>
-      {{ if .Prev }}
+      {{ if .PrevInSection }}
         <li>
           <a class="icon" href=" {{ .Prev.Permalink }}" aria-label="Previous">
-            <i class="fas fa-chevron-left" aria-hidden="true"></i> Previous
+            <i class="fas fa-chevron-left" aria-hidden="true"></i> Previous post
           </a>
         </li>
       {{ end }}
-      {{ if .Next }}
+      {{ if .NextInSection }}
         <li>
           <a class="icon" href="{{ .Next.Permalink }}" aria-label="Next">
-            <i class="fas fa-chevron-right" aria-hidden="true"></i> Next
+            <i class="fas fa-chevron-right" aria-hidden="true"></i> Next post
           </a>
         </li>
       {{ end }}

@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
   {{ partial "head.html" . }}
+
+
   <body class="pb4">
     <div class="max-width-5 mx-auto py4 mb3" style="position: relative;">
       <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
         <header class="max-width mx-auto">
+          {{ partial "header.html" . }}
+		  <hr>
           <h1 class="posttitle" itemprop="name headline">{{ .Title }}</h1>
           <div class="meta">
             {{ if (or (isset .Site "author") (isset .Site "title")) }}
@@ -96,7 +100,7 @@
             class="content max-width pb4 ltr"
             itemprop="articleBody">
             {{ .Content }}
-			{{ partial "post-footer.html" . }}
+            {{ partial "post-footer.html" . }}
           </div>
           {{ partial "page_nav.html" . }}
         </div>
