@@ -1,6 +1,6 @@
 # Kaktus
 
-A slightly modified fork of [Cactus](https://github.com/monkeyWzr/hugo-theme-cactus).
+A modified fork of [Cactus](https://github.com/monkeyWzr/hugo-theme-cactus) as seen on [my website](https://abhijithota.me).
 
 ## Differences from Cactus
 
