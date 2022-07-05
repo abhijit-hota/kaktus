@@ -1,6 +1,6 @@
 # Kaktus
 
-A modified fork of [Cactus](https://github.com/monkeyWzr/hugo-theme-cactus) as seen on [my website](https://abhijithota.me).
+A minimal and opinionated fork of [Cactus](https://github.com/monkeyWzr/hugo-theme-cactus) as seen on [my website](https://abhijithota.me).
 
 ## Differences from Cactus
 
@@ -40,4 +40,4 @@ A modified fork of [Cactus](https://github.com/monkeyWzr/hugo-theme-cactus) as s
     ],
   };
   ```
-- **Optional**: Add `node_modules` and `hugo_stats.json` to your `.gitignore`.
+- **Optional**: Add `node_modules`, `hugo_stats.json`, `package.json` and `package-lock.json` to your `.gitignore`.
