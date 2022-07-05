@@ -34,16 +34,13 @@
 
 
       <li>
-        <a
-          class="icon"
-          href="#"
-          aria-label="Share"
-          onclick="$('#share').toggle();return false;">
+        <a id="share-btn" class="icon" href="#" aria-label="Share">
           <i class="fas fa-share-alt" aria-hidden="true"></i> Share
         </a>
       </li>
       <div id="share" style="display: none">
-        {{ .Scratch.Set "icon_class_name" "" }} {{ partial "share.html" . }}
+        {{ .Scratch.Set "icon_class_name" "" }}
+        {{ partial "share.html" . }}
       </div>
     </ul>
   </div>
