@@ -8,9 +8,9 @@
       <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
         <header class="max-width mx-auto">
           {{ partial "header.html" . }}
-          <hr />
+          <hr class="mb4" />
           <h1 class="posttitle" itemprop="name headline">{{ .Title }}</h1>
-          <div class="meta">
+          <div class="meta mb0">
             {{ if (or (isset .Site "author") (isset .Site "title")) }}
               <span
                 class="author"
