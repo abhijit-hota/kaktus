@@ -54,24 +54,7 @@
       margin-right: 0;
     }
   }
-  #menu-icon {
-    float: right;
-    margin-right: 2rem;
-    margin-left: 15px;
 
-    &:hover {
-      color: $color-accent-1;
-    }
-  }
-  #menu-icon-tablet {
-    float: right;
-    margin-right: 2rem;
-    margin-left: 15px;
-
-    &:hover {
-      color: $color-accent-1;
-    }
-  }
   #top-icon-tablet {
     position: fixed;
     right: 2rem;
@@ -85,10 +68,6 @@
   }
   .active {
     color: $color-accent-1;
-  }
-  #menu {
-    visibility: hidden;
-    margin-right: 2rem;
   }
   #nav {
     color: $color-accent-1;
@@ -176,7 +155,7 @@
     nav > ul > li > ul > li {
       color: $color-meta;
       font-size: 0.7rem;
-	  margin-left: 1rem ;
+      margin-left: 1rem ;
 
       &:before {
         color: $color-accent-1;

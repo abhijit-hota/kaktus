@@ -6,8 +6,8 @@ $font-size: 14px;
 $line-height: 1.725;
 $page-width: 48rem;
 // Logo
-$logo-width: 50px;
-$logo-height: 50px;
+$logo-width: calc(50px + 0.4em);
+$logo-height: calc(50px + 0.4em);
 $logo-grayout: true;
 // Colors
-$colors: "dark" // white dark light classic
+$colors: "dark"; // white dark light classic
