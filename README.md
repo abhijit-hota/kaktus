@@ -7,7 +7,7 @@ A modified fork of [Cactus](https://github.com/monkeyWzr/hugo-theme-cactus) as s
 - [x] No comments
 - [x] Posts layout changed
 - [x] Custom footer
-- [ ] Remove jQuery
+- [x] Remove jQuery
 - [ ] Remove SCSS
 - [ ] Minimize JS and CSS
 - [ ] Fix Readme and Documentation
