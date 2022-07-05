@@ -1,4 +1,3 @@
-const $$ = document.querySelectorAll.bind(document);
 const $ = document.querySelector.bind(document);
 
 const hide = (queryString) => ($(queryString).style.display = "none");
@@ -35,11 +34,6 @@ ready(function () {
   /**
    * Shows the responsive navigation menu on mobile.
    */
-  $$("#header > #nav > ul > .icon").forEach((node) => {
-    node.addEventListener("click", function () {
-      node.parentElement.classList.toggle("responsive");
-    });
-  });
 
   /**
    * Controls the different versions of  the menu in blog post articles

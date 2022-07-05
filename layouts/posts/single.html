@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
   {{ partial "head.html" . }}
-
-
   <body class="pb4">
     <div class="max-width-5 mx-auto py4 mb3" style="position: relative;">
       <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
@@ -75,7 +73,7 @@
             {{ end }}
           </div>
         </header>
-        
+
         {{ if .Site.Params.tocInline }}
           <div id="toc">{{ .TableOfContents }}</div>
         {{ end }}
@@ -98,15 +96,9 @@
     </div>
   </body>
 
-  <link
-    rel="stylesheet"
-    href="{{ "/lib/font-awesome/css/all.min.css" | relURL }}" />
-  {{/*  <script src="{{ "/lib/jquery/jquery.min.js" | relURL }}"></script>  */}}
+  <script src="{{ "/js/header-menu.js" | relURL }}"></script>
   <script src="{{ "/js/main.js" | relURL }}"></script>
 
-  {{ if not (isset site.Params "disablecopy") }}
-    <script src="{{ "js/code-copy.js"  | relURL }}"></script>
-  {{ end }}
   {{ $mathjax := false }}
   {{ if isset .Params "mathjax" }}
     {{ $mathjax = .Params.mathjax }}
