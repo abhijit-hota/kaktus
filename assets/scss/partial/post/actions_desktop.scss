@@ -1,6 +1,11 @@
 #left-aside {
   width: 16rem;
   padding: 0 2rem;
+  .header-post {
+    ul > li {
+      margin-top: 1em;
+    }
+  }
 }
 #right-aside {
   padding-left: 2rem;
@@ -37,7 +42,6 @@
   }
 
   ul {
-    display: inline-block;
     margin: 0;
     padding: 0;
     list-style-type: none;

@@ -8,7 +8,7 @@
       <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
         <header class="max-width mx-auto">
           {{ partial "header.html" . }}
-		  <hr>
+          <hr />
           <h1 class="posttitle" itemprop="name headline">{{ .Title }}</h1>
           <div class="meta">
             {{ if (or (isset .Site "author") (isset .Site "title")) }}
@@ -75,19 +75,7 @@
             {{ end }}
           </div>
         </header>
-
-        {{ with .Resources.ByType "image" }}
-          <div class="article-gallery">
-            {{ range $index, $value := . }}
-              <a
-                class="gallery-item"
-                href="{{ .RelPermalink }}"
-                rel="gallery_{{ $index }}">
-                <img src="{{ .RelPermalink }}" itemprop="image" />
-              </a>
-            {{ end }}
-          </div>
-        {{ end }}
+        
         {{ if .Site.Params.tocInline }}
           <div id="toc">{{ .TableOfContents }}</div>
         {{ end }}

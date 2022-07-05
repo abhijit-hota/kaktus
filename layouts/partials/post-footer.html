@@ -1,7 +1,7 @@
 <hr />
-<h1 class="mt0">
-  Shared on
-  {{ if gt .Params.shares 0 -}}
+{{ if gt .Params.shares 0 -}}
+  <h1 class="mt0">
+    Shared on
     {{ range $index, $value := .Params.shares -}}
       {{ if gt $index 0 }}{{ ", " }}{{ end }}
       <a
@@ -11,5 +11,5 @@
         ><i class="fab fa-{{- $value.icon -}}"></i> {{ $value.title -}}</a
       >
     {{- end }}
-  {{- end }}
-</h1>
+  </h1>
+{{- end }}
