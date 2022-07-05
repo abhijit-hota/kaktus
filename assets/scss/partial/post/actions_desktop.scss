@@ -114,14 +114,12 @@
     }
   }
   #share {
-    clear: both;
-    padding-top: 1rem;
-    padding-right: 2rem;
-    text-align: right;
-
-    li {
-      display: block;
-      margin: 0;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        flex-basis: 25%;
+      }
     }
   }
   #toc {
@@ -134,8 +132,6 @@
     a:hover {
       color: $color-link;
     }
-    // .toc-level-1 > .toc-link
-    //   display: none
 
     nav > ul > li {
       color: $color-text;
@@ -155,7 +151,7 @@
     nav > ul > li > ul > li {
       color: $color-meta;
       font-size: 0.7rem;
-      margin-left: 1rem ;
+      margin-left: 1rem;
 
       &:before {
         color: $color-accent-1;
@@ -190,6 +186,6 @@
     }
   }
   article {
-	padding: 0 1rem;
+    padding: 0 1rem;
   }
 }
