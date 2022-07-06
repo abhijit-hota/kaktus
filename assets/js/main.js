@@ -31,14 +31,6 @@ function ready(fn) {
 }
 
 ready(function () {
-  /**
-   * Shows the responsive navigation menu on mobile.
-   */
-
-  /**
-   * Controls the different versions of  the menu in blog post articles
-   * for Desktop, tablet and mobile.
-   */
   if ($(".post")) {
     /**
      * Show mobile navigation menu after scrolling upwards,

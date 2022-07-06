@@ -96,7 +96,8 @@
     </div>
   </body>
 
-  <script src="{{ "/js/main.js" | relURL }}"></script>
+  {{- $js := resources.Get "js/main.js" | minify -}}
+  <script src="{{ $js.Permalink  }}"></script>
 
   {{ $mathjax := false }}
   {{ if isset .Params "mathjax" }}

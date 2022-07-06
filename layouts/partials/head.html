@@ -28,7 +28,7 @@
   <title>{{ if .IsPage }}{{ .Title }} |{{ end }}{{ .Site.Title }}</title>
   <link rel="canonical" href="{{ .Permalink }}" />
   {{ with .Site.Params.description }}
-    <meta name="description" content="{{ . }}" />
+    <meta name="description" content="{{ . | markdownify }}" />
   {{ end }}
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="all,follow" />
