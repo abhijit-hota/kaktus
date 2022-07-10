@@ -5,6 +5,10 @@
       style="background-image: url(https://www.gravatar.com/avatar/{{ md5 .Site.Params.gravatar }}?s=100&d=identicon)"></div>
   {{ else if (isset .Site.Params "logo") }}
     <img id="logo" src="{{ .Site.Params.logo | absURL }}" alt="" />
+  {{ else if (isset .Site.Params "asciilogo") }}
+    <div id="ascii-logo">
+      {{- .Site.Params.asciiLogo -}}
+    </div>
   {{ else }}
     <img id="logo" src="{{ "images/logo.png" | absURL }}" alt="" />
   {{ end }}

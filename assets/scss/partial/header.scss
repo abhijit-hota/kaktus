@@ -102,3 +102,13 @@
     display: none;
   }
 }
+
+#ascii-logo {
+  float: left;
+  margin-right: 20px;
+  padding: 2px;
+  white-space: pre;
+  line-height: 1.1;
+  color: #2bbc8a;
+  font-weight: bold;
+}
