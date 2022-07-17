@@ -41,7 +41,7 @@
               <div class="article-read-time">
                 <i class="far fa-clock"></i>
                 {{ $readTime := math.Round (div (countwords .Content) 220.0) }}
-                {{ $readTime }} minute read
+                {{ $readTime }} minute read for ~{{ .FuzzyWordCount }} words
               </div>
             {{ end }}
             {{ if gt .Params.categories 0 }}
@@ -97,7 +97,7 @@
   </body>
 
   {{- $js := resources.Get "js/main.js" | minify -}}
-  <script src="{{ $js.Permalink  }}"></script>
+  <script src="{{ $js.Permalink }}"></script>
 
   {{ $mathjax := false }}
   {{ if isset .Params "mathjax" }}
