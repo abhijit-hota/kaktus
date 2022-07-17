@@ -6,7 +6,9 @@
   {{ else if (isset .Site.Params "logo") }}
     <img id="logo" src="{{ .Site.Params.logo | absURL }}" alt="" />
   {{ else if (isset .Site.Params "asciilogo") }}
-    <div id="ascii-logo"><p>{{- .Site.Params.asciiLogo -}}</p></div>
+    <div id="ascii-logo">
+      {{- replace .Site.Params.asciiLogo " " "&nbsp;" | safeHTML -}}
+    </div>
   {{ else }}
     <img id="logo" src="{{ "images/logo.png" | absURL }}" alt="" />
   {{ end }}
