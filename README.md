@@ -8,9 +8,12 @@ A minimal and opinionated fork of [Cactus](https://github.com/monkeyWzr/hugo-the
 - [x] Posts layout changed
 - [x] Custom footer
 - [x] Remove jQuery
-- [ ] Remove SCSS
 - [x] Minimize JS and CSS
-- [ ] Fix Readme and Documentation
+- [x] Remove less used JS (code-copy, etc.)
+- [x] Accessibility fixes
+- [ ] Make documentation better
+- [ ] Add configuration for some stuff
+- [ ] Cleanup codebase (useless CSS, etc.)
 
 ## Notes on minimizing CSS
 
