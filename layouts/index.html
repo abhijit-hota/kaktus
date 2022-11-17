@@ -42,7 +42,7 @@
             <a
               class="icon"
               target="_blank"
-              rel="noopener"
+              rel={{ if isset $elem "rel" }}{{ $elem.rel }}{{ else }}{{ "noopener" }}{{ end }}
               href="{{ $elem.link }}"
               aria-label="{{ $elem.name }}">
               <i class="fab fa-{{ lower $elem.name }}" aria-hidden="true"></i>
