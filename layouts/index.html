@@ -143,7 +143,10 @@
           </li>
         {{ end }}
       </ul>
-    {{ end }}
+      {{ end }}
+      {{ if (ge (len $mainPosts) 5) }}
+        <span class="h2"><a href="{{ .Site.Params.mainSection | absURL }}">All posts</a></span>
+      {{ end }}
   </section>
 
   {{ $showProjectsList := false }}
