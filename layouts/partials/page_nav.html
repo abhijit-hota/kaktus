@@ -1,12 +1,12 @@
 <aside id="right-aside">
   <div class="header-post mt3">
-    {{ if not .Site.Params.tocInline }}
-      <h3>Table of Contents</h3>
-      <div id="toc">{{ .TableOfContents }}</div>
-    {{ end }}
+    {{ if (and (not .Site.Params.tocInline) (ne .Params.toc false)) }}
+    <h3>Table of Contents</h3>
+    <div id="toc">{{ .TableOfContents }}</div>
     <hr />
     <a id="top" class="icon" href="#" aria-label="Top of Page">
       <i class="fas fa-chevron-up" aria-hidden="true"></i> Back to top
     </a>
+    {{ end }}
   </div>
 </aside>
