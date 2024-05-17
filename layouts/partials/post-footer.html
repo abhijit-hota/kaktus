@@ -5,7 +5,7 @@
     {{ range $index, $value := .Params.shares -}}
       {{ if gt $index 0 }}{{ ", " }}{{ end }}
       <a
-        href="{{ $value.url | relLangURL }}{{ $value | urlize }}"
+        href="{{ $value.url | relLangURL }}"
         rel="noopener noreferrer"
         target="_blank"
         ><i class="fab fa-{{- $value.icon -}}"></i> {{ $value.title -}}</a

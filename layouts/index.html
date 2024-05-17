@@ -144,7 +144,7 @@
         {{ end }}
       </ul>
       {{ end }}
-      {{ if (ge (len $mainPosts) 5) }}
+      {{ if (ge (len $mainPosts) (.Scratch.Get "count")) }}
         <span class="h2"><a href="{{ .Site.Params.mainSection | absURL }}">All posts</a></span>
       {{ end }}
   </section>
