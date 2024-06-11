@@ -193,6 +193,7 @@ code {
   border: 1px dotted $color-border;
   border-radius: 2px;
   -webkit-border-radius: 2px;
+  text-wrap: nowrap;
 }
 
 .highlight {
