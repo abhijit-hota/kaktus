@@ -11,7 +11,7 @@ min_version = "0.55"
 # If the theme has a single author
 [author]
 name = "Abhijit Hota"
-homepage = "https://abhijithota.me"
+homepage = "https://abhijithota.com"
 
 # If porting an existing theme
 [original]
